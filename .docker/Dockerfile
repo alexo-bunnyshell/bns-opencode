@@ -16,4 +16,4 @@ WORKDIR /workspace
 
 EXPOSE 7681
 
-CMD ["ttyd", "-W", "bash"]
+CMD ["sh", "-c", "ttyd -W -c ${TTYD_USER}:${TTYD_PASS} bash"]

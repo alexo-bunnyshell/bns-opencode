@@ -3,6 +3,13 @@ name: opencode
 type: primary
 environmentVariables:
     OPENAI_API_KEY: 'your-api-key-here'
+    TTYD_USER: 'admin'
+    TTYD_PASS: 'changeme'
+security:
+    access:
+        allowedIps:
+            - '0.0.0.0/0'
+        realIpTrustedProxies: null
 components:
     -
         kind: Application
@@ -17,6 +24,8 @@ components:
                 target: dev
             environment:
                 OPENAI_API_KEY: '{{ env.vars.OPENAI_API_KEY }}'
+                TTYD_USER: '{{ env.vars.TTYD_USER }}'
+                TTYD_PASS: '{{ env.vars.TTYD_PASS }}'
             ports:
                 - '7681:7681'
         hosts:
