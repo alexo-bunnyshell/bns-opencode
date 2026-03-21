@@ -1,0 +1,14 @@
+name: OpenCode Workspace
+description: A cloud workspace with OpenCode, an open-source AI coding agent with a terminal UI. Supports 75+ LLM providers. Includes a web-based terminal (ttyd) for browser access.
+tags: [ ai, opencode, cli, coding-agent, golang ]
+icons: [ golang ]
+categories: [ ai/ml ]
+stack:
+  packages:
+    - name: Go
+      version: '1.24'
+    - name: OpenCode
+      version: 'latest'
+    - name: ttyd
+      version: '1.7.7'
+discoverable: true
